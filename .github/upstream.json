@@ -1,0 +1,1 @@
+{n  "upstreams": [n    {n      "repo": "rust-lang/unsafe-code-guidelines",n      "branch": "master",n      "paths": [n        "reference/src"n      ],n      "base": "d809f91e62968913d808e53397fbcf7cea762cce"n    }n  ]n}

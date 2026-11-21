@@ -1,0 +1,16 @@
+title: Unsafe Code Guidelines Reference 日本語訳
+lang: ja
+baseurl: /unsafe-code-guidelines-ja
+url: https://rustsecjp.github.io
+repo_url: https://github.com/RustSecJP/unsafe-code-guidelines-ja
+plugins:
+  - jekyll-sitemap
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+exclude:
+  - .github
+  - README.md
+  - NOTICE.md

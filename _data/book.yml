@@ -1,0 +1,27 @@
+short: "Unsafe Code Guidelines"
+title: "Unsafe Code Guidelines Reference"
+original_title: "Unsafe Code Guidelines Reference"
+seo_title: "Unsafe Code Guidelines Reference（rust-lang「Unsafe Code Guidelines」日本語訳）"
+summary: "Rust の unsafe なコードの決まりを議論する rust-lang の Unsafe Code Guidelines WG がまとめた参考資料の、非公式な日本語訳。健全性、未定義動作、有効性不変条件、来歴などの用語集と、データレイアウトと有効性のアーカイブ済みの議論を訳している。"
+author: "Rust Unsafe Code Guidelines Working Group"
+source: "https://github.com/rust-lang/unsafe-code-guidelines"
+license: "MIT または Apache-2.0"
+license_url: "https://github.com/rust-lang/unsafe-code-guidelines/blob/master/LICENSE-MIT"
+version: "2026-05-05 時点（コミット d809f91）"
+translated: "2026-11-21"
+disclaimer: "Rust Project・RustSec・Rust Foundation とは提携していません。この資料は Rust の規範ではありません。"
+home_toc: true
+chapters:
+  - {file: "introduction.html", title: "はじめに"}
+  - {file: "glossary.html", title: "用語集"}
+  - {file: "layout/structs-and-tuples.html", title: "データレイアウト: 構造体とタプル"}
+  - {file: "layout/scalars.html", title: "データレイアウト: スカラ"}
+  - {file: "layout/enums.html", title: "データレイアウト: 列挙型"}
+  - {file: "layout/unions.html", title: "データレイアウト: 共用体"}
+  - {file: "layout/pointers.html", title: "データレイアウト: ポインタ"}
+  - {file: "layout/function-pointers.html", title: "データレイアウト: 関数ポインタ"}
+  - {file: "layout/arrays-and-slices.html", title: "データレイアウト: 配列とスライス"}
+  - {file: "layout/packed-simd-vectors.html", title: "データレイアウト: パックされた SIMD ベクタ"}
+  - {file: "validity/unions.html", title: "有効性: 共用体"}
+  - {file: "validity/function-pointers.html", title: "有効性: 関数ポインタ"}
+  - {file: "optimizations/return_value_optimization.html", title: "最適化: 戻り値の最適化"}

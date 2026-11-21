@@ -1,0 +1,5 @@
+# unsafe-code-guidelines-ja
+
+> RustSecJP（非公式のコミュニティ）による、Rust の文書の非公式な日本語訳。
+
+- [Unsafe Code Guidelines Reference 日本語訳](https://rustsecjp.github.io/unsafe-code-guidelines-ja/): unsafe なコードの用語集（健全性、未定義動作、有効性不変条件など）と議論の記録。原文は https://rust-lang.github.io/unsafe-code-guidelines/ （MIT または Apache-2.0）。

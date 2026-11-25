@@ -20,7 +20,7 @@ jobs:
           REPO: ${{ github.repository }}
         run: |
           python3 - <<'PY'
-          import json, os, subprocess, urllib.parse
+          import fnmatch, json, os, subprocess, urllib.parse
 
           def gh(*args, input=None):
               r = subprocess.run(["gh", *args], capture_output=True, text=True, input=input)
@@ -37,7 +37,7 @@ jobs:
               cmp = json.loads(gh("api", f"repos/{src}/compare/{base}...{branch}"))
               head = cmp["commits"][-1]["sha"] if cmp["commits"] else base
               files = [f for f in cmp.get("files", [])
-                       if any(f["filename"] == p or f["filename"].startswith(p.rstrip("/") + "/") for p in up["paths"])]
+                       if any(f["filename"] == p or f["filename"].startswith(p.rstrip("/") + "/") or fnmatch.fnmatchcase(f["filename"], p) for p in up["paths"])]
               if not files:
                   continue
               changed_any = True

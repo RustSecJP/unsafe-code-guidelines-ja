@@ -27,12 +27,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+<link rel="stylesheet" href="{{ '/assets/ja-docs.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 </head>
 <body>
 <a class="skip" href="#main">本文へ移動</a>
 <header class="top">
   <div class="top-in">
-    <a class="brand" href="{{ '/' | relative_url }}"><span class="brand-mark" aria-hidden="true">RS</span><span><b>{{ book.short }}</b> 日本語訳</span></a>
+    <a class="brand" href="{{ '/' | relative_url }}"><img class="brand-logo" src="{{ '/assets/logo.png' | relative_url }}" alt="" width="28" height="28"><span><b>{{ book.short }}</b> 日本語訳</span></a>
     <nav class="nav" aria-label="メインメニュー">
       <a href="{{ '/' | relative_url }}"{% if page.url == "/" %} aria-current="page"{% endif %}>目次</a>
       {% for c in book.nav %}<a href="{{ '/' | append: c.file | relative_url }}"{% if cur and cur.file == c.file %} aria-current="page"{% endif %}>{{ c.title }}</a>{% endfor %}
@@ -72,6 +73,8 @@
   <p>RustSecJP は<b>非公式</b>のコミュニティです。{{ book.disclaimer }}</p>
   <p><a href="{{ site.repo_url }}">GitHub</a> ・ <a href="https://rustsecjp.github.io/">RustSecJP のトップページ</a></p>
 </footer>
+<script>window.JaDocs={repo:"{{ site.repo_url }}"};</script>
+<script src="{{ '/assets/ja-docs.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
 <script src="{{ '/assets/site.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
 </body>
 </html>
